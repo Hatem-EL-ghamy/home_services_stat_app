@@ -22,9 +22,15 @@ mixin _$CompanyState<T> {
     required TResult Function() getHourlyAllCompaniesLoading,
     required TResult Function(T data) getHourlyAllCompaniesSuccess,
     required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
     required TResult Function() getContractAllCompaniesLoading,
     required TResult Function(T data) getContractAllCompaniesSuccess,
     required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -33,9 +39,15 @@ mixin _$CompanyState<T> {
     TResult? Function()? getHourlyAllCompaniesLoading,
     TResult? Function(T data)? getHourlyAllCompaniesSuccess,
     TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
     TResult? Function()? getContractAllCompaniesLoading,
     TResult? Function(T data)? getContractAllCompaniesSuccess,
     TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,9 +56,15 @@ mixin _$CompanyState<T> {
     TResult Function()? getHourlyAllCompaniesLoading,
     TResult Function(T data)? getHourlyAllCompaniesSuccess,
     TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
     TResult Function()? getContractAllCompaniesLoading,
     TResult Function(T data)? getContractAllCompaniesSuccess,
     TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,12 +77,24 @@ mixin _$CompanyState<T> {
         getHourlyAllCompaniesSuccess,
     required TResult Function(GetHourlyAllCompaniesError<T> value)
         getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
     required TResult Function(GetContractAllCompaniesLoading<T> value)
         getContractAllCompaniesLoading,
     required TResult Function(GetContractAllCompaniesSuccess<T> value)
         getContractAllCompaniesSuccess,
     required TResult Function(GetContractAllCompaniesError<T> value)
         getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,12 +106,24 @@ mixin _$CompanyState<T> {
         getHourlyAllCompaniesSuccess,
     TResult? Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult? Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult? Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult? Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -93,12 +135,24 @@ mixin _$CompanyState<T> {
         getHourlyAllCompaniesSuccess,
     TResult Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -164,9 +218,15 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() getHourlyAllCompaniesLoading,
     required TResult Function(T data) getHourlyAllCompaniesSuccess,
     required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
     required TResult Function() getContractAllCompaniesLoading,
     required TResult Function(T data) getContractAllCompaniesSuccess,
     required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
   }) {
     return initial();
   }
@@ -178,9 +238,15 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? getHourlyAllCompaniesLoading,
     TResult? Function(T data)? getHourlyAllCompaniesSuccess,
     TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
     TResult? Function()? getContractAllCompaniesLoading,
     TResult? Function(T data)? getContractAllCompaniesSuccess,
     TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
   }) {
     return initial?.call();
   }
@@ -192,9 +258,15 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? getHourlyAllCompaniesLoading,
     TResult Function(T data)? getHourlyAllCompaniesSuccess,
     TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
     TResult Function()? getContractAllCompaniesLoading,
     TResult Function(T data)? getContractAllCompaniesSuccess,
     TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -213,12 +285,24 @@ class _$InitialImpl<T> implements _Initial<T> {
         getHourlyAllCompaniesSuccess,
     required TResult Function(GetHourlyAllCompaniesError<T> value)
         getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
     required TResult Function(GetContractAllCompaniesLoading<T> value)
         getContractAllCompaniesLoading,
     required TResult Function(GetContractAllCompaniesSuccess<T> value)
         getContractAllCompaniesSuccess,
     required TResult Function(GetContractAllCompaniesError<T> value)
         getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
   }) {
     return initial(this);
   }
@@ -233,12 +317,24 @@ class _$InitialImpl<T> implements _Initial<T> {
         getHourlyAllCompaniesSuccess,
     TResult? Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult? Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult? Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult? Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
   }) {
     return initial?.call(this);
   }
@@ -253,12 +349,24 @@ class _$InitialImpl<T> implements _Initial<T> {
         getHourlyAllCompaniesSuccess,
     TResult Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -319,9 +427,15 @@ class _$GetHourlyAllCompaniesLoadingImpl<T>
     required TResult Function() getHourlyAllCompaniesLoading,
     required TResult Function(T data) getHourlyAllCompaniesSuccess,
     required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
     required TResult Function() getContractAllCompaniesLoading,
     required TResult Function(T data) getContractAllCompaniesSuccess,
     required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesLoading();
   }
@@ -333,9 +447,15 @@ class _$GetHourlyAllCompaniesLoadingImpl<T>
     TResult? Function()? getHourlyAllCompaniesLoading,
     TResult? Function(T data)? getHourlyAllCompaniesSuccess,
     TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
     TResult? Function()? getContractAllCompaniesLoading,
     TResult? Function(T data)? getContractAllCompaniesSuccess,
     TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesLoading?.call();
   }
@@ -347,9 +467,15 @@ class _$GetHourlyAllCompaniesLoadingImpl<T>
     TResult Function()? getHourlyAllCompaniesLoading,
     TResult Function(T data)? getHourlyAllCompaniesSuccess,
     TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
     TResult Function()? getContractAllCompaniesLoading,
     TResult Function(T data)? getContractAllCompaniesSuccess,
     TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getHourlyAllCompaniesLoading != null) {
@@ -368,12 +494,24 @@ class _$GetHourlyAllCompaniesLoadingImpl<T>
         getHourlyAllCompaniesSuccess,
     required TResult Function(GetHourlyAllCompaniesError<T> value)
         getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
     required TResult Function(GetContractAllCompaniesLoading<T> value)
         getContractAllCompaniesLoading,
     required TResult Function(GetContractAllCompaniesSuccess<T> value)
         getContractAllCompaniesSuccess,
     required TResult Function(GetContractAllCompaniesError<T> value)
         getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesLoading(this);
   }
@@ -388,12 +526,24 @@ class _$GetHourlyAllCompaniesLoadingImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult? Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult? Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult? Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult? Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesLoading?.call(this);
   }
@@ -408,12 +558,24 @@ class _$GetHourlyAllCompaniesLoadingImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getHourlyAllCompaniesLoading != null) {
@@ -503,9 +665,15 @@ class _$GetHourlyAllCompaniesSuccessImpl<T>
     required TResult Function() getHourlyAllCompaniesLoading,
     required TResult Function(T data) getHourlyAllCompaniesSuccess,
     required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
     required TResult Function() getContractAllCompaniesLoading,
     required TResult Function(T data) getContractAllCompaniesSuccess,
     required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesSuccess(data);
   }
@@ -517,9 +685,15 @@ class _$GetHourlyAllCompaniesSuccessImpl<T>
     TResult? Function()? getHourlyAllCompaniesLoading,
     TResult? Function(T data)? getHourlyAllCompaniesSuccess,
     TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
     TResult? Function()? getContractAllCompaniesLoading,
     TResult? Function(T data)? getContractAllCompaniesSuccess,
     TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesSuccess?.call(data);
   }
@@ -531,9 +705,15 @@ class _$GetHourlyAllCompaniesSuccessImpl<T>
     TResult Function()? getHourlyAllCompaniesLoading,
     TResult Function(T data)? getHourlyAllCompaniesSuccess,
     TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
     TResult Function()? getContractAllCompaniesLoading,
     TResult Function(T data)? getContractAllCompaniesSuccess,
     TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getHourlyAllCompaniesSuccess != null) {
@@ -552,12 +732,24 @@ class _$GetHourlyAllCompaniesSuccessImpl<T>
         getHourlyAllCompaniesSuccess,
     required TResult Function(GetHourlyAllCompaniesError<T> value)
         getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
     required TResult Function(GetContractAllCompaniesLoading<T> value)
         getContractAllCompaniesLoading,
     required TResult Function(GetContractAllCompaniesSuccess<T> value)
         getContractAllCompaniesSuccess,
     required TResult Function(GetContractAllCompaniesError<T> value)
         getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesSuccess(this);
   }
@@ -572,12 +764,24 @@ class _$GetHourlyAllCompaniesSuccessImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult? Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult? Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult? Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult? Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesSuccess?.call(this);
   }
@@ -592,12 +796,24 @@ class _$GetHourlyAllCompaniesSuccessImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getHourlyAllCompaniesSuccess != null) {
@@ -692,9 +908,15 @@ class _$GetHourlyAllCompaniesErrorImpl<T>
     required TResult Function() getHourlyAllCompaniesLoading,
     required TResult Function(T data) getHourlyAllCompaniesSuccess,
     required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
     required TResult Function() getContractAllCompaniesLoading,
     required TResult Function(T data) getContractAllCompaniesSuccess,
     required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesError(error);
   }
@@ -706,9 +928,15 @@ class _$GetHourlyAllCompaniesErrorImpl<T>
     TResult? Function()? getHourlyAllCompaniesLoading,
     TResult? Function(T data)? getHourlyAllCompaniesSuccess,
     TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
     TResult? Function()? getContractAllCompaniesLoading,
     TResult? Function(T data)? getContractAllCompaniesSuccess,
     TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesError?.call(error);
   }
@@ -720,9 +948,15 @@ class _$GetHourlyAllCompaniesErrorImpl<T>
     TResult Function()? getHourlyAllCompaniesLoading,
     TResult Function(T data)? getHourlyAllCompaniesSuccess,
     TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
     TResult Function()? getContractAllCompaniesLoading,
     TResult Function(T data)? getContractAllCompaniesSuccess,
     TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getHourlyAllCompaniesError != null) {
@@ -741,12 +975,24 @@ class _$GetHourlyAllCompaniesErrorImpl<T>
         getHourlyAllCompaniesSuccess,
     required TResult Function(GetHourlyAllCompaniesError<T> value)
         getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
     required TResult Function(GetContractAllCompaniesLoading<T> value)
         getContractAllCompaniesLoading,
     required TResult Function(GetContractAllCompaniesSuccess<T> value)
         getContractAllCompaniesSuccess,
     required TResult Function(GetContractAllCompaniesError<T> value)
         getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesError(this);
   }
@@ -761,12 +1007,24 @@ class _$GetHourlyAllCompaniesErrorImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult? Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult? Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult? Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult? Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
   }) {
     return getHourlyAllCompaniesError?.call(this);
   }
@@ -781,12 +1039,24 @@ class _$GetHourlyAllCompaniesErrorImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getHourlyAllCompaniesError != null) {
@@ -804,6 +1074,703 @@ abstract class GetHourlyAllCompaniesError<T> implements CompanyState<T> {
   @JsonKey(ignore: true)
   _$$GetHourlyAllCompaniesErrorImplCopyWith<T,
           _$GetHourlyAllCompaniesErrorImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OrderHourlyAllCompaniesLoadingImplCopyWith<T, $Res> {
+  factory _$$OrderHourlyAllCompaniesLoadingImplCopyWith(
+          _$OrderHourlyAllCompaniesLoadingImpl<T> value,
+          $Res Function(_$OrderHourlyAllCompaniesLoadingImpl<T>) then) =
+      __$$OrderHourlyAllCompaniesLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$OrderHourlyAllCompaniesLoadingImplCopyWithImpl<T, $Res>
+    extends _$CompanyStateCopyWithImpl<T, $Res,
+        _$OrderHourlyAllCompaniesLoadingImpl<T>>
+    implements _$$OrderHourlyAllCompaniesLoadingImplCopyWith<T, $Res> {
+  __$$OrderHourlyAllCompaniesLoadingImplCopyWithImpl(
+      _$OrderHourlyAllCompaniesLoadingImpl<T> _value,
+      $Res Function(_$OrderHourlyAllCompaniesLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$OrderHourlyAllCompaniesLoadingImpl<T>
+    implements OrderHourlyAllCompaniesLoading<T> {
+  const _$OrderHourlyAllCompaniesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'CompanyState<$T>.orderHourlyAllCompaniesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OrderHourlyAllCompaniesLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getHourlyAllCompaniesLoading,
+    required TResult Function(T data) getHourlyAllCompaniesSuccess,
+    required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
+    required TResult Function() getContractAllCompaniesLoading,
+    required TResult Function(T data) getContractAllCompaniesSuccess,
+    required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getHourlyAllCompaniesLoading,
+    TResult? Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
+    TResult? Function()? getContractAllCompaniesLoading,
+    TResult? Function(T data)? getContractAllCompaniesSuccess,
+    TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getHourlyAllCompaniesLoading,
+    TResult Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
+    TResult Function()? getContractAllCompaniesLoading,
+    TResult Function(T data)? getContractAllCompaniesSuccess,
+    TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderHourlyAllCompaniesLoading != null) {
+      return orderHourlyAllCompaniesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetHourlyAllCompaniesLoading<T> value)
+        getHourlyAllCompaniesLoading,
+    required TResult Function(GetHourlyAllCompaniesSuccess<T> value)
+        getHourlyAllCompaniesSuccess,
+    required TResult Function(GetHourlyAllCompaniesError<T> value)
+        getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
+    required TResult Function(GetContractAllCompaniesLoading<T> value)
+        getContractAllCompaniesLoading,
+    required TResult Function(GetContractAllCompaniesSuccess<T> value)
+        getContractAllCompaniesSuccess,
+    required TResult Function(GetContractAllCompaniesError<T> value)
+        getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult? Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult? Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult? Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult? Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult? Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderHourlyAllCompaniesLoading != null) {
+      return orderHourlyAllCompaniesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OrderHourlyAllCompaniesLoading<T> implements CompanyState<T> {
+  const factory OrderHourlyAllCompaniesLoading() =
+      _$OrderHourlyAllCompaniesLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$OrderHourlyAllCompaniesSuccessImplCopyWith<T, $Res> {
+  factory _$$OrderHourlyAllCompaniesSuccessImplCopyWith(
+          _$OrderHourlyAllCompaniesSuccessImpl<T> value,
+          $Res Function(_$OrderHourlyAllCompaniesSuccessImpl<T>) then) =
+      __$$OrderHourlyAllCompaniesSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$OrderHourlyAllCompaniesSuccessImplCopyWithImpl<T, $Res>
+    extends _$CompanyStateCopyWithImpl<T, $Res,
+        _$OrderHourlyAllCompaniesSuccessImpl<T>>
+    implements _$$OrderHourlyAllCompaniesSuccessImplCopyWith<T, $Res> {
+  __$$OrderHourlyAllCompaniesSuccessImplCopyWithImpl(
+      _$OrderHourlyAllCompaniesSuccessImpl<T> _value,
+      $Res Function(_$OrderHourlyAllCompaniesSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$OrderHourlyAllCompaniesSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OrderHourlyAllCompaniesSuccessImpl<T>
+    implements OrderHourlyAllCompaniesSuccess<T> {
+  const _$OrderHourlyAllCompaniesSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'CompanyState<$T>.orderHourlyAllCompaniesSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OrderHourlyAllCompaniesSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OrderHourlyAllCompaniesSuccessImplCopyWith<T,
+          _$OrderHourlyAllCompaniesSuccessImpl<T>>
+      get copyWith => __$$OrderHourlyAllCompaniesSuccessImplCopyWithImpl<T,
+          _$OrderHourlyAllCompaniesSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getHourlyAllCompaniesLoading,
+    required TResult Function(T data) getHourlyAllCompaniesSuccess,
+    required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
+    required TResult Function() getContractAllCompaniesLoading,
+    required TResult Function(T data) getContractAllCompaniesSuccess,
+    required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getHourlyAllCompaniesLoading,
+    TResult? Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
+    TResult? Function()? getContractAllCompaniesLoading,
+    TResult? Function(T data)? getContractAllCompaniesSuccess,
+    TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getHourlyAllCompaniesLoading,
+    TResult Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
+    TResult Function()? getContractAllCompaniesLoading,
+    TResult Function(T data)? getContractAllCompaniesSuccess,
+    TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderHourlyAllCompaniesSuccess != null) {
+      return orderHourlyAllCompaniesSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetHourlyAllCompaniesLoading<T> value)
+        getHourlyAllCompaniesLoading,
+    required TResult Function(GetHourlyAllCompaniesSuccess<T> value)
+        getHourlyAllCompaniesSuccess,
+    required TResult Function(GetHourlyAllCompaniesError<T> value)
+        getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
+    required TResult Function(GetContractAllCompaniesLoading<T> value)
+        getContractAllCompaniesLoading,
+    required TResult Function(GetContractAllCompaniesSuccess<T> value)
+        getContractAllCompaniesSuccess,
+    required TResult Function(GetContractAllCompaniesError<T> value)
+        getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult? Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult? Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult? Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult? Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult? Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderHourlyAllCompaniesSuccess != null) {
+      return orderHourlyAllCompaniesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OrderHourlyAllCompaniesSuccess<T> implements CompanyState<T> {
+  const factory OrderHourlyAllCompaniesSuccess(final T data) =
+      _$OrderHourlyAllCompaniesSuccessImpl<T>;
+
+  T get data;
+  @JsonKey(ignore: true)
+  _$$OrderHourlyAllCompaniesSuccessImplCopyWith<T,
+          _$OrderHourlyAllCompaniesSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OrderHourlyAllCompaniesErrorImplCopyWith<T, $Res> {
+  factory _$$OrderHourlyAllCompaniesErrorImplCopyWith(
+          _$OrderHourlyAllCompaniesErrorImpl<T> value,
+          $Res Function(_$OrderHourlyAllCompaniesErrorImpl<T>) then) =
+      __$$OrderHourlyAllCompaniesErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$OrderHourlyAllCompaniesErrorImplCopyWithImpl<T, $Res>
+    extends _$CompanyStateCopyWithImpl<T, $Res,
+        _$OrderHourlyAllCompaniesErrorImpl<T>>
+    implements _$$OrderHourlyAllCompaniesErrorImplCopyWith<T, $Res> {
+  __$$OrderHourlyAllCompaniesErrorImplCopyWithImpl(
+      _$OrderHourlyAllCompaniesErrorImpl<T> _value,
+      $Res Function(_$OrderHourlyAllCompaniesErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$OrderHourlyAllCompaniesErrorImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OrderHourlyAllCompaniesErrorImpl<T>
+    implements OrderHourlyAllCompaniesError<T> {
+  const _$OrderHourlyAllCompaniesErrorImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'CompanyState<$T>.orderHourlyAllCompaniesError(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OrderHourlyAllCompaniesErrorImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OrderHourlyAllCompaniesErrorImplCopyWith<T,
+          _$OrderHourlyAllCompaniesErrorImpl<T>>
+      get copyWith => __$$OrderHourlyAllCompaniesErrorImplCopyWithImpl<T,
+          _$OrderHourlyAllCompaniesErrorImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getHourlyAllCompaniesLoading,
+    required TResult Function(T data) getHourlyAllCompaniesSuccess,
+    required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
+    required TResult Function() getContractAllCompaniesLoading,
+    required TResult Function(T data) getContractAllCompaniesSuccess,
+    required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesError(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getHourlyAllCompaniesLoading,
+    TResult? Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
+    TResult? Function()? getContractAllCompaniesLoading,
+    TResult? Function(T data)? getContractAllCompaniesSuccess,
+    TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesError?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getHourlyAllCompaniesLoading,
+    TResult Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
+    TResult Function()? getContractAllCompaniesLoading,
+    TResult Function(T data)? getContractAllCompaniesSuccess,
+    TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderHourlyAllCompaniesError != null) {
+      return orderHourlyAllCompaniesError(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetHourlyAllCompaniesLoading<T> value)
+        getHourlyAllCompaniesLoading,
+    required TResult Function(GetHourlyAllCompaniesSuccess<T> value)
+        getHourlyAllCompaniesSuccess,
+    required TResult Function(GetHourlyAllCompaniesError<T> value)
+        getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
+    required TResult Function(GetContractAllCompaniesLoading<T> value)
+        getContractAllCompaniesLoading,
+    required TResult Function(GetContractAllCompaniesSuccess<T> value)
+        getContractAllCompaniesSuccess,
+    required TResult Function(GetContractAllCompaniesError<T> value)
+        getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult? Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult? Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult? Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult? Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult? Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+  }) {
+    return orderHourlyAllCompaniesError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderHourlyAllCompaniesError != null) {
+      return orderHourlyAllCompaniesError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OrderHourlyAllCompaniesError<T> implements CompanyState<T> {
+  const factory OrderHourlyAllCompaniesError({required final String error}) =
+      _$OrderHourlyAllCompaniesErrorImpl<T>;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$OrderHourlyAllCompaniesErrorImplCopyWith<T,
+          _$OrderHourlyAllCompaniesErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -854,9 +1821,15 @@ class _$GetContractAllCompaniesLoadingImpl<T>
     required TResult Function() getHourlyAllCompaniesLoading,
     required TResult Function(T data) getHourlyAllCompaniesSuccess,
     required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
     required TResult Function() getContractAllCompaniesLoading,
     required TResult Function(T data) getContractAllCompaniesSuccess,
     required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesLoading();
   }
@@ -868,9 +1841,15 @@ class _$GetContractAllCompaniesLoadingImpl<T>
     TResult? Function()? getHourlyAllCompaniesLoading,
     TResult? Function(T data)? getHourlyAllCompaniesSuccess,
     TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
     TResult? Function()? getContractAllCompaniesLoading,
     TResult? Function(T data)? getContractAllCompaniesSuccess,
     TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesLoading?.call();
   }
@@ -882,9 +1861,15 @@ class _$GetContractAllCompaniesLoadingImpl<T>
     TResult Function()? getHourlyAllCompaniesLoading,
     TResult Function(T data)? getHourlyAllCompaniesSuccess,
     TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
     TResult Function()? getContractAllCompaniesLoading,
     TResult Function(T data)? getContractAllCompaniesSuccess,
     TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getContractAllCompaniesLoading != null) {
@@ -903,12 +1888,24 @@ class _$GetContractAllCompaniesLoadingImpl<T>
         getHourlyAllCompaniesSuccess,
     required TResult Function(GetHourlyAllCompaniesError<T> value)
         getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
     required TResult Function(GetContractAllCompaniesLoading<T> value)
         getContractAllCompaniesLoading,
     required TResult Function(GetContractAllCompaniesSuccess<T> value)
         getContractAllCompaniesSuccess,
     required TResult Function(GetContractAllCompaniesError<T> value)
         getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesLoading(this);
   }
@@ -923,12 +1920,24 @@ class _$GetContractAllCompaniesLoadingImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult? Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult? Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult? Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult? Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesLoading?.call(this);
   }
@@ -943,12 +1952,24 @@ class _$GetContractAllCompaniesLoadingImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getContractAllCompaniesLoading != null) {
@@ -1038,9 +2059,15 @@ class _$GetContractAllCompaniesSuccessImpl<T>
     required TResult Function() getHourlyAllCompaniesLoading,
     required TResult Function(T data) getHourlyAllCompaniesSuccess,
     required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
     required TResult Function() getContractAllCompaniesLoading,
     required TResult Function(T data) getContractAllCompaniesSuccess,
     required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesSuccess(data);
   }
@@ -1052,9 +2079,15 @@ class _$GetContractAllCompaniesSuccessImpl<T>
     TResult? Function()? getHourlyAllCompaniesLoading,
     TResult? Function(T data)? getHourlyAllCompaniesSuccess,
     TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
     TResult? Function()? getContractAllCompaniesLoading,
     TResult? Function(T data)? getContractAllCompaniesSuccess,
     TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesSuccess?.call(data);
   }
@@ -1066,9 +2099,15 @@ class _$GetContractAllCompaniesSuccessImpl<T>
     TResult Function()? getHourlyAllCompaniesLoading,
     TResult Function(T data)? getHourlyAllCompaniesSuccess,
     TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
     TResult Function()? getContractAllCompaniesLoading,
     TResult Function(T data)? getContractAllCompaniesSuccess,
     TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getContractAllCompaniesSuccess != null) {
@@ -1087,12 +2126,24 @@ class _$GetContractAllCompaniesSuccessImpl<T>
         getHourlyAllCompaniesSuccess,
     required TResult Function(GetHourlyAllCompaniesError<T> value)
         getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
     required TResult Function(GetContractAllCompaniesLoading<T> value)
         getContractAllCompaniesLoading,
     required TResult Function(GetContractAllCompaniesSuccess<T> value)
         getContractAllCompaniesSuccess,
     required TResult Function(GetContractAllCompaniesError<T> value)
         getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesSuccess(this);
   }
@@ -1107,12 +2158,24 @@ class _$GetContractAllCompaniesSuccessImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult? Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult? Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult? Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult? Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesSuccess?.call(this);
   }
@@ -1127,12 +2190,24 @@ class _$GetContractAllCompaniesSuccessImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getContractAllCompaniesSuccess != null) {
@@ -1227,9 +2302,15 @@ class _$GetContractAllCompaniesErrorImpl<T>
     required TResult Function() getHourlyAllCompaniesLoading,
     required TResult Function(T data) getHourlyAllCompaniesSuccess,
     required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
     required TResult Function() getContractAllCompaniesLoading,
     required TResult Function(T data) getContractAllCompaniesSuccess,
     required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesError(error);
   }
@@ -1241,9 +2322,15 @@ class _$GetContractAllCompaniesErrorImpl<T>
     TResult? Function()? getHourlyAllCompaniesLoading,
     TResult? Function(T data)? getHourlyAllCompaniesSuccess,
     TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
     TResult? Function()? getContractAllCompaniesLoading,
     TResult? Function(T data)? getContractAllCompaniesSuccess,
     TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesError?.call(error);
   }
@@ -1255,9 +2342,15 @@ class _$GetContractAllCompaniesErrorImpl<T>
     TResult Function()? getHourlyAllCompaniesLoading,
     TResult Function(T data)? getHourlyAllCompaniesSuccess,
     TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
     TResult Function()? getContractAllCompaniesLoading,
     TResult Function(T data)? getContractAllCompaniesSuccess,
     TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getContractAllCompaniesError != null) {
@@ -1276,12 +2369,24 @@ class _$GetContractAllCompaniesErrorImpl<T>
         getHourlyAllCompaniesSuccess,
     required TResult Function(GetHourlyAllCompaniesError<T> value)
         getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
     required TResult Function(GetContractAllCompaniesLoading<T> value)
         getContractAllCompaniesLoading,
     required TResult Function(GetContractAllCompaniesSuccess<T> value)
         getContractAllCompaniesSuccess,
     required TResult Function(GetContractAllCompaniesError<T> value)
         getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesError(this);
   }
@@ -1296,12 +2401,24 @@ class _$GetContractAllCompaniesErrorImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult? Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult? Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult? Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult? Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
   }) {
     return getContractAllCompaniesError?.call(this);
   }
@@ -1316,12 +2433,24 @@ class _$GetContractAllCompaniesErrorImpl<T>
         getHourlyAllCompaniesSuccess,
     TResult Function(GetHourlyAllCompaniesError<T> value)?
         getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
     TResult Function(GetContractAllCompaniesLoading<T> value)?
         getContractAllCompaniesLoading,
     TResult Function(GetContractAllCompaniesSuccess<T> value)?
         getContractAllCompaniesSuccess,
     TResult Function(GetContractAllCompaniesError<T> value)?
         getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
     required TResult orElse(),
   }) {
     if (getContractAllCompaniesError != null) {
@@ -1339,5 +2468,702 @@ abstract class GetContractAllCompaniesError<T> implements CompanyState<T> {
   @JsonKey(ignore: true)
   _$$GetContractAllCompaniesErrorImplCopyWith<T,
           _$GetContractAllCompaniesErrorImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OrderContractAllCompaniesLoadingImplCopyWith<T, $Res> {
+  factory _$$OrderContractAllCompaniesLoadingImplCopyWith(
+          _$OrderContractAllCompaniesLoadingImpl<T> value,
+          $Res Function(_$OrderContractAllCompaniesLoadingImpl<T>) then) =
+      __$$OrderContractAllCompaniesLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$OrderContractAllCompaniesLoadingImplCopyWithImpl<T, $Res>
+    extends _$CompanyStateCopyWithImpl<T, $Res,
+        _$OrderContractAllCompaniesLoadingImpl<T>>
+    implements _$$OrderContractAllCompaniesLoadingImplCopyWith<T, $Res> {
+  __$$OrderContractAllCompaniesLoadingImplCopyWithImpl(
+      _$OrderContractAllCompaniesLoadingImpl<T> _value,
+      $Res Function(_$OrderContractAllCompaniesLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$OrderContractAllCompaniesLoadingImpl<T>
+    implements OrderContractAllCompaniesLoading<T> {
+  const _$OrderContractAllCompaniesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'CompanyState<$T>.orderContractAllCompaniesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OrderContractAllCompaniesLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getHourlyAllCompaniesLoading,
+    required TResult Function(T data) getHourlyAllCompaniesSuccess,
+    required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
+    required TResult Function() getContractAllCompaniesLoading,
+    required TResult Function(T data) getContractAllCompaniesSuccess,
+    required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getHourlyAllCompaniesLoading,
+    TResult? Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
+    TResult? Function()? getContractAllCompaniesLoading,
+    TResult? Function(T data)? getContractAllCompaniesSuccess,
+    TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getHourlyAllCompaniesLoading,
+    TResult Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
+    TResult Function()? getContractAllCompaniesLoading,
+    TResult Function(T data)? getContractAllCompaniesSuccess,
+    TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderContractAllCompaniesLoading != null) {
+      return orderContractAllCompaniesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetHourlyAllCompaniesLoading<T> value)
+        getHourlyAllCompaniesLoading,
+    required TResult Function(GetHourlyAllCompaniesSuccess<T> value)
+        getHourlyAllCompaniesSuccess,
+    required TResult Function(GetHourlyAllCompaniesError<T> value)
+        getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
+    required TResult Function(GetContractAllCompaniesLoading<T> value)
+        getContractAllCompaniesLoading,
+    required TResult Function(GetContractAllCompaniesSuccess<T> value)
+        getContractAllCompaniesSuccess,
+    required TResult Function(GetContractAllCompaniesError<T> value)
+        getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult? Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult? Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult? Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult? Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult? Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderContractAllCompaniesLoading != null) {
+      return orderContractAllCompaniesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OrderContractAllCompaniesLoading<T> implements CompanyState<T> {
+  const factory OrderContractAllCompaniesLoading() =
+      _$OrderContractAllCompaniesLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$OrderContractAllCompaniesSuccessImplCopyWith<T, $Res> {
+  factory _$$OrderContractAllCompaniesSuccessImplCopyWith(
+          _$OrderContractAllCompaniesSuccessImpl<T> value,
+          $Res Function(_$OrderContractAllCompaniesSuccessImpl<T>) then) =
+      __$$OrderContractAllCompaniesSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$OrderContractAllCompaniesSuccessImplCopyWithImpl<T, $Res>
+    extends _$CompanyStateCopyWithImpl<T, $Res,
+        _$OrderContractAllCompaniesSuccessImpl<T>>
+    implements _$$OrderContractAllCompaniesSuccessImplCopyWith<T, $Res> {
+  __$$OrderContractAllCompaniesSuccessImplCopyWithImpl(
+      _$OrderContractAllCompaniesSuccessImpl<T> _value,
+      $Res Function(_$OrderContractAllCompaniesSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$OrderContractAllCompaniesSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OrderContractAllCompaniesSuccessImpl<T>
+    implements OrderContractAllCompaniesSuccess<T> {
+  const _$OrderContractAllCompaniesSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'CompanyState<$T>.orderContractAllCompaniesSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OrderContractAllCompaniesSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OrderContractAllCompaniesSuccessImplCopyWith<T,
+          _$OrderContractAllCompaniesSuccessImpl<T>>
+      get copyWith => __$$OrderContractAllCompaniesSuccessImplCopyWithImpl<T,
+          _$OrderContractAllCompaniesSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getHourlyAllCompaniesLoading,
+    required TResult Function(T data) getHourlyAllCompaniesSuccess,
+    required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
+    required TResult Function() getContractAllCompaniesLoading,
+    required TResult Function(T data) getContractAllCompaniesSuccess,
+    required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getHourlyAllCompaniesLoading,
+    TResult? Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
+    TResult? Function()? getContractAllCompaniesLoading,
+    TResult? Function(T data)? getContractAllCompaniesSuccess,
+    TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getHourlyAllCompaniesLoading,
+    TResult Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
+    TResult Function()? getContractAllCompaniesLoading,
+    TResult Function(T data)? getContractAllCompaniesSuccess,
+    TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderContractAllCompaniesSuccess != null) {
+      return orderContractAllCompaniesSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetHourlyAllCompaniesLoading<T> value)
+        getHourlyAllCompaniesLoading,
+    required TResult Function(GetHourlyAllCompaniesSuccess<T> value)
+        getHourlyAllCompaniesSuccess,
+    required TResult Function(GetHourlyAllCompaniesError<T> value)
+        getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
+    required TResult Function(GetContractAllCompaniesLoading<T> value)
+        getContractAllCompaniesLoading,
+    required TResult Function(GetContractAllCompaniesSuccess<T> value)
+        getContractAllCompaniesSuccess,
+    required TResult Function(GetContractAllCompaniesError<T> value)
+        getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult? Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult? Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult? Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult? Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult? Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderContractAllCompaniesSuccess != null) {
+      return orderContractAllCompaniesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OrderContractAllCompaniesSuccess<T> implements CompanyState<T> {
+  const factory OrderContractAllCompaniesSuccess(final T data) =
+      _$OrderContractAllCompaniesSuccessImpl<T>;
+
+  T get data;
+  @JsonKey(ignore: true)
+  _$$OrderContractAllCompaniesSuccessImplCopyWith<T,
+          _$OrderContractAllCompaniesSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OrderContractAllCompaniesErrorImplCopyWith<T, $Res> {
+  factory _$$OrderContractAllCompaniesErrorImplCopyWith(
+          _$OrderContractAllCompaniesErrorImpl<T> value,
+          $Res Function(_$OrderContractAllCompaniesErrorImpl<T>) then) =
+      __$$OrderContractAllCompaniesErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$OrderContractAllCompaniesErrorImplCopyWithImpl<T, $Res>
+    extends _$CompanyStateCopyWithImpl<T, $Res,
+        _$OrderContractAllCompaniesErrorImpl<T>>
+    implements _$$OrderContractAllCompaniesErrorImplCopyWith<T, $Res> {
+  __$$OrderContractAllCompaniesErrorImplCopyWithImpl(
+      _$OrderContractAllCompaniesErrorImpl<T> _value,
+      $Res Function(_$OrderContractAllCompaniesErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$OrderContractAllCompaniesErrorImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OrderContractAllCompaniesErrorImpl<T>
+    implements OrderContractAllCompaniesError<T> {
+  const _$OrderContractAllCompaniesErrorImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'CompanyState<$T>.orderContractAllCompaniesError(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OrderContractAllCompaniesErrorImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OrderContractAllCompaniesErrorImplCopyWith<T,
+          _$OrderContractAllCompaniesErrorImpl<T>>
+      get copyWith => __$$OrderContractAllCompaniesErrorImplCopyWithImpl<T,
+          _$OrderContractAllCompaniesErrorImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getHourlyAllCompaniesLoading,
+    required TResult Function(T data) getHourlyAllCompaniesSuccess,
+    required TResult Function(String error) getHourlyAllCompaniesError,
+    required TResult Function() orderHourlyAllCompaniesLoading,
+    required TResult Function(T data) orderHourlyAllCompaniesSuccess,
+    required TResult Function(String error) orderHourlyAllCompaniesError,
+    required TResult Function() getContractAllCompaniesLoading,
+    required TResult Function(T data) getContractAllCompaniesSuccess,
+    required TResult Function(String error) getContractAllCompaniesError,
+    required TResult Function() orderContractAllCompaniesLoading,
+    required TResult Function(T data) orderContractAllCompaniesSuccess,
+    required TResult Function(String error) orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesError(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getHourlyAllCompaniesLoading,
+    TResult? Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? getHourlyAllCompaniesError,
+    TResult? Function()? orderHourlyAllCompaniesLoading,
+    TResult? Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult? Function(String error)? orderHourlyAllCompaniesError,
+    TResult? Function()? getContractAllCompaniesLoading,
+    TResult? Function(T data)? getContractAllCompaniesSuccess,
+    TResult? Function(String error)? getContractAllCompaniesError,
+    TResult? Function()? orderContractAllCompaniesLoading,
+    TResult? Function(T data)? orderContractAllCompaniesSuccess,
+    TResult? Function(String error)? orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesError?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getHourlyAllCompaniesLoading,
+    TResult Function(T data)? getHourlyAllCompaniesSuccess,
+    TResult Function(String error)? getHourlyAllCompaniesError,
+    TResult Function()? orderHourlyAllCompaniesLoading,
+    TResult Function(T data)? orderHourlyAllCompaniesSuccess,
+    TResult Function(String error)? orderHourlyAllCompaniesError,
+    TResult Function()? getContractAllCompaniesLoading,
+    TResult Function(T data)? getContractAllCompaniesSuccess,
+    TResult Function(String error)? getContractAllCompaniesError,
+    TResult Function()? orderContractAllCompaniesLoading,
+    TResult Function(T data)? orderContractAllCompaniesSuccess,
+    TResult Function(String error)? orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderContractAllCompaniesError != null) {
+      return orderContractAllCompaniesError(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetHourlyAllCompaniesLoading<T> value)
+        getHourlyAllCompaniesLoading,
+    required TResult Function(GetHourlyAllCompaniesSuccess<T> value)
+        getHourlyAllCompaniesSuccess,
+    required TResult Function(GetHourlyAllCompaniesError<T> value)
+        getHourlyAllCompaniesError,
+    required TResult Function(OrderHourlyAllCompaniesLoading<T> value)
+        orderHourlyAllCompaniesLoading,
+    required TResult Function(OrderHourlyAllCompaniesSuccess<T> value)
+        orderHourlyAllCompaniesSuccess,
+    required TResult Function(OrderHourlyAllCompaniesError<T> value)
+        orderHourlyAllCompaniesError,
+    required TResult Function(GetContractAllCompaniesLoading<T> value)
+        getContractAllCompaniesLoading,
+    required TResult Function(GetContractAllCompaniesSuccess<T> value)
+        getContractAllCompaniesSuccess,
+    required TResult Function(GetContractAllCompaniesError<T> value)
+        getContractAllCompaniesError,
+    required TResult Function(OrderContractAllCompaniesLoading<T> value)
+        orderContractAllCompaniesLoading,
+    required TResult Function(OrderContractAllCompaniesSuccess<T> value)
+        orderContractAllCompaniesSuccess,
+    required TResult Function(OrderContractAllCompaniesError<T> value)
+        orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult? Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult? Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult? Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult? Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult? Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult? Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult? Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult? Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult? Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult? Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult? Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+  }) {
+    return orderContractAllCompaniesError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetHourlyAllCompaniesLoading<T> value)?
+        getHourlyAllCompaniesLoading,
+    TResult Function(GetHourlyAllCompaniesSuccess<T> value)?
+        getHourlyAllCompaniesSuccess,
+    TResult Function(GetHourlyAllCompaniesError<T> value)?
+        getHourlyAllCompaniesError,
+    TResult Function(OrderHourlyAllCompaniesLoading<T> value)?
+        orderHourlyAllCompaniesLoading,
+    TResult Function(OrderHourlyAllCompaniesSuccess<T> value)?
+        orderHourlyAllCompaniesSuccess,
+    TResult Function(OrderHourlyAllCompaniesError<T> value)?
+        orderHourlyAllCompaniesError,
+    TResult Function(GetContractAllCompaniesLoading<T> value)?
+        getContractAllCompaniesLoading,
+    TResult Function(GetContractAllCompaniesSuccess<T> value)?
+        getContractAllCompaniesSuccess,
+    TResult Function(GetContractAllCompaniesError<T> value)?
+        getContractAllCompaniesError,
+    TResult Function(OrderContractAllCompaniesLoading<T> value)?
+        orderContractAllCompaniesLoading,
+    TResult Function(OrderContractAllCompaniesSuccess<T> value)?
+        orderContractAllCompaniesSuccess,
+    TResult Function(OrderContractAllCompaniesError<T> value)?
+        orderContractAllCompaniesError,
+    required TResult orElse(),
+  }) {
+    if (orderContractAllCompaniesError != null) {
+      return orderContractAllCompaniesError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OrderContractAllCompaniesError<T> implements CompanyState<T> {
+  const factory OrderContractAllCompaniesError({required final String error}) =
+      _$OrderContractAllCompaniesErrorImpl<T>;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$OrderContractAllCompaniesErrorImplCopyWith<T,
+          _$OrderContractAllCompaniesErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

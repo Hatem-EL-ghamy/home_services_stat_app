@@ -18,12 +18,27 @@ class CompanyState<T> with _$CompanyState<T> {
   const factory CompanyState.getHourlyAllCompaniesError({required String error}) = GetHourlyAllCompaniesError;
 
 
+  const factory CompanyState.orderHourlyAllCompaniesLoading() = OrderHourlyAllCompaniesLoading;
+
+  const factory CompanyState.orderHourlyAllCompaniesSuccess(T data) = OrderHourlyAllCompaniesSuccess<T>;
+
+  const factory CompanyState.orderHourlyAllCompaniesError({required String error}) = OrderHourlyAllCompaniesError;
+
 
     const factory CompanyState.getContractAllCompaniesLoading() = GetContractAllCompaniesLoading;
 
   const factory CompanyState.getContractAllCompaniesSuccess(T data) = GetContractAllCompaniesSuccess<T>;
 
   const factory CompanyState.getContractAllCompaniesError({required String error}) = GetContractAllCompaniesError;
+
+
+    const factory CompanyState.orderContractAllCompaniesLoading() = OrderContractAllCompaniesLoading;
+
+  const factory CompanyState.orderContractAllCompaniesSuccess(T data) = OrderContractAllCompaniesSuccess<T>;
+
+  const factory CompanyState.orderContractAllCompaniesError({required String error}) = OrderContractAllCompaniesError;
+
+  
 
 
 

@@ -3,9 +3,12 @@
 
 import 'dart:developer';
 
+import 'package:home_ease/core/networking/local/cache_helper.dart';
 import 'package:home_ease/core/networking/remote/api_error_handler.dart';
 import 'package:home_ease/core/networking/remote/api_result.dart';
 import 'package:home_ease/core/networking/remote/api_service.dart';
+import 'package:home_ease/features/service/data/models/contract_order_model.dart';
+import 'package:home_ease/features/service/data/models/hourly_order_model.dart';
 import 'package:home_ease/features/service/data/models/product_company.dart';
 
 class CompanyRepo{
@@ -33,5 +36,37 @@ class CompanyRepo{
     }
   }
 
+
+
+  Future<ApiResult<ContractOrderModel>> contractOrderAllCompanies(
+    {
+      required String token,
+       ContractOrder? contractOrder,
+    }
+   ) async {
+    try {
+      final response = await _apiService.contractOrder(token, contractOrder!);
+      log(response.toString());
+      return ApiResult.success(response);
+    } catch (error) {
+      return ApiResult.failure(ErrorHandler.handle(error));
+    }
+  }
+
+
+    Future<ApiResult<HourlyOrderModel>> hourlyOrderAllCompanies(
+    {
+      required String token,
+       HourlyOrder? hourlyOrder,
+    }
+   ) async {
+    try {
+      final response = await _apiService.hourlyOrder(token, hourlyOrder!);
+      log(response.toString());
+      return ApiResult.success(response);
+    } catch (error) {
+      return ApiResult.failure(ErrorHandler.handle(error));
+    }
+  }
 
 }

@@ -12,18 +12,24 @@ import 'package:home_ease/features/service/data/models/product_company.dart';
 
 class CardDetails extends StatelessWidget {
   final Companies? companies;
+  final String? type;
+  final void Function()? onTap;
 
-  const CardDetails({super.key, this.companies});
+  Color color;
+  double width;
+
+
+   CardDetails({super.key, this.companies, this.type, this.onTap,this.color=Colors.grey,this.width=1.0});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
           color: ColorsApp.white,
-          border: Border.all(color: ColorsApp.gray),
+          border: Border.all(color: color,width: width),
           borderRadius: const BorderRadius.all(
             Radius.circular(8),
           ),
@@ -73,7 +79,7 @@ class CardDetails extends StatelessWidget {
                     width: 3.w,
                   ),
                   Text(
-                    "${companies!.numbers} Months",
+                    "${companies!.numbers} $type",
                   ),
                 ],
               ),

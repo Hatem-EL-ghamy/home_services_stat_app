@@ -1,8 +1,5 @@
 
 
-
-
-
 import 'package:json_annotation/json_annotation.dart';
 part 'hourly_order_model.g.dart';
 
@@ -25,8 +22,6 @@ String? message;
 
 }
 
- 
-
 @JsonSerializable()
 class HourlyOrder {
 
@@ -43,16 +38,10 @@ String ? period;
   String ? categorieId;
   DateTime  ? date;
   String ?time;
-  @JsonKey(name: 'user_id')
-  String ? userId;
-
-  String ? status;
-  @JsonKey(name: 'updated_at')
-  String ? updatedAt;
-  @JsonKey(name: 'created_at')
-  String ? createdAt;
  
-  String ? id;
+
+  
+ 
   HourlyOrder({
     this.numberOfHours,
     this.city,
@@ -63,11 +52,7 @@ String ? period;
     this.date,
     this.time,
     this.period,
-    this.userId,
-    this.status,
-    this.updatedAt,
-    this.createdAt,
-    this.id,
+   
   });
 
    Map<String, dynamic> toJson()=>_$HourlyOrderToJson(this);

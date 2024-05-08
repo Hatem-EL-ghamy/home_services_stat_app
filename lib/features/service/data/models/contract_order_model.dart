@@ -39,16 +39,8 @@ class ContractOrder {
   String ? categorieId;
 
   DateTime  ? date;
-  @JsonKey(name: 'user_id')
-  String ? userId;
 
-  String ? status;
-  @JsonKey(name: 'updated_at')
-  String ? updatedAt;
-  @JsonKey(name: 'created_at')
-  String ? createdAt;
  
-  String ? id;
   ContractOrder({
     this.numberOfMonths,
     this.city,
@@ -58,11 +50,7 @@ class ContractOrder {
     this.categorieId,
     this.date,
     
-    this.userId,
-    this.status,
-    this.updatedAt,
-    this.createdAt,
-    this.id,
+
   });
 
    Map<String, dynamic> toJson()=>_$ContractOrderToJson(this);

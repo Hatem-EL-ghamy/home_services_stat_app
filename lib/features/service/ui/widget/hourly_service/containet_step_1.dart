@@ -28,26 +28,26 @@ class ContainerStepOneHourlyService extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Period'.tr(),
-          style: TextStyles.font16Black700,
-        ),
-        SizedBox(height: 5.h),
-        Row(
-          children: [
-            ButtonCard(
-              onPressed: () {},
-              text: 'Morning'.tr(),
-              image: 'assets/images/sun_icon.png',
-            ),
-            const Spacer(),
-            ButtonCard(
-              onPressed: () {},
-              text: 'Night'.tr(),
-              image: 'assets/images/Night_icon.png',
-            ),
-          ],
-        ),
+        // Text(
+        //   'Period'.tr(),
+        //   style: TextStyles.font16Black700,
+        // ),
+        // SizedBox(height: 5.h),
+        // Row(
+        //   children: [
+        //     ButtonCard(
+        //       onPressed: () {},
+        //       text: 'Morning'.tr(),
+        //       image: 'assets/images/sun_icon.png',
+        //     ),
+        //     const Spacer(),
+        //     ButtonCard(
+        //       onPressed: () {},
+        //       text: 'Night'.tr(),
+        //       image: 'assets/images/Night_icon.png',
+        //     ),
+        //   ],
+        // ),
         SizedBox(
           height: 28.h,
         ),

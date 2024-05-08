@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'http://192.168.0.101:8000/';
+    baseUrl ??= 'http://192.168.216.149:8000/';
   }
 
   final Dio _dio;
@@ -186,6 +186,70 @@ class _ApiService implements ApiService {
           baseUrl,
         ))));
     final value = _result.data;
+    return value;
+  }
+
+  @override
+  Future<ContractOrderModel> contractOrder(
+    String token,
+    ContractOrder contractOrder,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
+    final _data = <String, dynamic>{};
+    _data.addAll(contractOrder.toJson());
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ContractOrderModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'api/user/auth/ContractOrder/store',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ContractOrderModel.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<HourlyOrderModel> hourlyOrder(
+    String token,
+    HourlyOrder hourlyOrder,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
+    final _data = <String, dynamic>{};
+    _data.addAll(hourlyOrder.toJson());
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<HourlyOrderModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'api/user/auth/HourlyOrder/store',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = HourlyOrderModel.fromJson(_result.data!);
     return value;
   }
 

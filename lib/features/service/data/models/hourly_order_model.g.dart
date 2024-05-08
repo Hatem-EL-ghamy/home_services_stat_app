@@ -33,11 +33,6 @@ HourlyOrder _$HourlyOrderFromJson(Map<String, dynamic> json) => HourlyOrder(
           json['date'] == null ? null : DateTime.parse(json['date'] as String),
       time: json['time'] as String?,
       period: json['Period'] as String?,
-      userId: json['user_id'] as String?,
-      status: json['status'] as String?,
-      updatedAt: json['updated_at'] as String?,
-      createdAt: json['created_at'] as String?,
-      id: json['id'] as String?,
     );
 
 Map<String, dynamic> _$HourlyOrderToJson(HourlyOrder instance) =>
@@ -51,9 +46,4 @@ Map<String, dynamic> _$HourlyOrderToJson(HourlyOrder instance) =>
       'categorie_id': instance.categorieId,
       'date': instance.date?.toIso8601String(),
       'time': instance.time,
-      'user_id': instance.userId,
-      'status': instance.status,
-      'updated_at': instance.updatedAt,
-      'created_at': instance.createdAt,
-      'id': instance.id,
     };

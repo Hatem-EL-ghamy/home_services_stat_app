@@ -33,11 +33,6 @@ ContractOrder _$ContractOrderFromJson(Map<String, dynamic> json) =>
       categorieId: json['categorie_id'] as String?,
       date:
           json['date'] == null ? null : DateTime.parse(json['date'] as String),
-      userId: json['user_id'] as String?,
-      status: json['status'] as String?,
-      updatedAt: json['updated_at'] as String?,
-      createdAt: json['created_at'] as String?,
-      id: json['id'] as String?,
     );
 
 Map<String, dynamic> _$ContractOrderToJson(ContractOrder instance) =>
@@ -49,9 +44,4 @@ Map<String, dynamic> _$ContractOrderToJson(ContractOrder instance) =>
       'company_id': instance.companyId,
       'categorie_id': instance.categorieId,
       'date': instance.date?.toIso8601String(),
-      'user_id': instance.userId,
-      'status': instance.status,
-      'updated_at': instance.updatedAt,
-      'created_at': instance.createdAt,
-      'id': instance.id,
     };

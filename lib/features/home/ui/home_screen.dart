@@ -37,9 +37,10 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         backgroundColor: ColorsApp.lightGreen,
         appBar: AppBar(
-          leading: Image.asset(
-            "assets/images/notifications.png",
-          ),
+          // leading: Image.asset(
+          //   "assets/images/notifications.png",
+          // ),
+          leading: const SizedBox.shrink(),
           centerTitle: true,
           title: logoAndText(),
           // actions: [
@@ -144,5 +145,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
