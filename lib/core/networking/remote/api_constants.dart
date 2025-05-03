@@ -1,17 +1,24 @@
 class ApiConstants {
-  static const String apiBaseUrl = "http://192.168.0.101:8000/";
+  static const String apiBaseUrl = "http://192.168.216.149:8000/";
 
-   static const String login = "api/user/auth/login";
+  static const String login = "api/user/auth/login";
 
+  static const String register = "api/user/auth/register";
 
-      static const String register = "api/user/auth/register";
-      
-      static const String categories = "api/user/auth/categorie/AllCategories";
+  static const String categories = "api/user/auth/categorie/AllCategories";
 
+  static const String contact = "api/user/auth/contact";
 
+  static const String contractOrder = "api/user/auth/ContractOrder/store";
 
+  static const String hourlyOrder = "api/user/auth/HourlyOrder/store";
+
+  static const String getHourlyAllCompanies =
+      "api/user/auth/company/get/Hourly/AllCompanies";
+
+  static const String getContractAllCompanies =
+      "api/user/auth/company/get/Contract/AllCompanies";
 }
-
 
 class ApiErrors {
   static const String badRequestError = "badRequestError";

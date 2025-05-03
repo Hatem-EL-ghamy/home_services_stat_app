@@ -11,9 +11,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContainerStepThreeContractService extends StatelessWidget {
-  DateTime selectedDate = DateTime.now();
+  DateTime? selectedDate= DateTime.now();
 
-  ContainerStepThreeContractService({super.key, required this.address});
+  ContainerStepThreeContractService({   super.key,required this.selectedDate,  required this.address,});
 
   final address;
 

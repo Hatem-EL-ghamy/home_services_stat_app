@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_ease/core/helpers/constants.dart';
 import 'package:home_ease/core/theming/colors.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 
@@ -42,7 +43,7 @@ class CardTypeService extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.network(
-                "http://192.168.0.101:8000/storage/${category!.path}",
+                "$serverPhotoURL/${category!.path}",
                 width: 120.w,
                 height: 120.h,
                 fit: BoxFit.fill,

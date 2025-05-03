@@ -11,9 +11,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContainerStepThreeHourlyService extends StatelessWidget {
-  DateTime selectedDate = DateTime.now();
+  DateTime? selectedDate = DateTime.now();
 
-  ContainerStepThreeHourlyService({super.key, required this.address});
+
+  DateTime? time = DateTime.now();
+
+  ContainerStepThreeHourlyService({super.key,this.selectedDate , required this.address,this.time});
 
   final address;
 
@@ -88,6 +91,7 @@ class ContainerStepThreeHourlyService extends StatelessWidget {
           width: double.infinity,
           height: 100,
           child: TimePickerSpinner(
+            time: time,
             itemWidth: 50,
             is24HourMode: false,
             normalTextStyle: TextStyles.font16Black700,
@@ -96,6 +100,7 @@ class ContainerStepThreeHourlyService extends StatelessWidget {
             itemHeight: 50,
             isForce2Digits: true,
             onTimeChange: (time) {
+              time = time;
               // print('Selected time: ${time.hour}:${time.minute}');
             },
           ),
