@@ -40,18 +40,18 @@ class CategoriesScreen extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              AppTextFormField(
-                hintText: "findCategory".tr(),
-                //  LocaleKeys.findCategory.tr(),
-                // "Find Category".tr(),
-                validator: (p0) {},
-                backgroundColor: ColorsApp.white,
-                suffixIcon: Icon(
-                  Icons.search,
-                  size: 30,
-                  color: ColorsApp.gray,
-                ),
-              ),
+              // AppTextFormField(
+              //   hintText: "findCategory".tr(),
+              //   //  LocaleKeys.findCategory.tr(),
+              //   // "Find Category".tr(),
+              //   validator: (p0) {},
+              //   backgroundColor: ColorsApp.white,
+              //   suffixIcon: Icon(
+              //     Icons.search,
+              //     size: 30,
+              //     color: ColorsApp.gray,
+              //   ),
+              // ),
               BlocBuilder<CategoryCubit, CategoryState>(
                 builder: (context, state) {
                   var categories =

@@ -79,10 +79,11 @@ class _HourlyCleaningScreen extends State<HourlyServiceScreen> {
           isCompleted = true;
           _companyCubit.orderHourlyAllCompanies(
             city: city.text,
+
             address: address.text,
             nationality: nationality.text,
             numberOfHours: numberOfHours.text,
-            categorieId: CacheHelper.getData(key: "contractCompanyId"),
+            categorieId: widget.category!.id.toString(),
             companyId: _companyCubit.companyIdHourly.toString(),
             date: selectedDate,
             time:time.toString(),

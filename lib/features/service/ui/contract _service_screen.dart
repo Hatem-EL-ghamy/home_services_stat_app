@@ -81,7 +81,7 @@ class _HourlyCleaningScreen extends State<ContractServiceScreen> {
             address: address.text,
             nationality: nationality.text,
             numberOfMonths: numberOfMonths.text,
-            categorieId: CacheHelper.getData(key: "contractCompanyId"),
+            categorieId: widget.category!.id.toString(),
             companyId: _companyCubit.companyId.toString(),
             date: selectedDate,
           );
