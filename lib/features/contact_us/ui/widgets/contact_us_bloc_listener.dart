@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_ease/core/helpers/navigation_extensions.dart';
@@ -24,7 +25,7 @@ class ContactUsBlocListener extends StatelessWidget {
           context.pop();
           showSnackBar(
             context,
-            content: "Contact successfully sent",
+            content: "Contact successfully sent".tr(),
             backgroundColor: ColorsApp.mainGreen,
           );
           context.pushNamed(Routes.homeLayout);

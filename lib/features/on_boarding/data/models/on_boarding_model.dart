@@ -1,6 +1,7 @@
-
 import 'package:home_ease/translations/locale_keys.dart';
 import 'package:easy_localization/easy_localization.dart';
+
+ 
 
 
 class OnBoardingModel {

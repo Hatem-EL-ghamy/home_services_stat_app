@@ -1,13 +1,13 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart'; 
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:home_ease/core/theming/colors.dart';
+import 'package:home_ease/core/helpers/app_regex.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_ease/core/theming/text_styles%20.dart';
+import 'package:home_ease/core/widgets/app_text_form_field.dart'; 
 // ignore_for_file: depend_on_referenced_packages
 
-import 'package:flutter/material.dart';
-import 'package:home_ease/core/helpers/app_regex.dart';
-import 'package:home_ease/core/theming/colors.dart';
-import 'package:home_ease/core/theming/text_styles%20.dart';
-import 'package:home_ease/core/widgets/app_text_form_field.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_ease/features/auth/login/logic/login_cubit.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -19,37 +19,36 @@ class LoginForm extends StatefulWidget {
 class _LoginFormState extends State<LoginForm> {
   bool isPasswordObscureText = true;
 
-  // TextInputType? keyboardType;
-
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: context.read<LoginCubit>().formKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Phone Number',
+            'Email'.tr(),
             style: TextStyles.font16Black600,
           ),
           AppTextFormField(
-              keyboardType: TextInputType.phone,
-              suffixIcon: Icon(
-                Icons.phone,
-                color: ColorsApp.gray,
-              ),
-              hintText: 'Enter your phone number',
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter a valid phone number';
-                }
-              },
-              controller: context.read<LoginCubit>().phoneController),
+            keyboardType: TextInputType.emailAddress,
+            suffixIcon: Icon(
+              Icons.email_outlined,
+              color: ColorsApp.gray,
+            ),
+            hintText: 'Enter your Email'.tr(),
+            validator: (value) {
+              if (value == null ||
+                  value.isEmpty ||
+                  !AppRegex.isEmailValid(value)) {
+                return 'Please enter a valid email'.tr();
+              }
+            },
+          ),
           SizedBox(
             height: 18.h,
           ),
           Text(
-            'Password',
+            'Password'.tr(),
             style: TextStyles.font16Black600,
           ),
           AppTextFormField(
@@ -65,14 +64,13 @@ class _LoginFormState extends State<LoginForm> {
                 color: ColorsApp.gray,
               ),
             ),
-            controller: context.read<LoginCubit>().passwordController,
 
-            hintText: 'Enter Your Password',
+            hintText: 'Enter Your Password'.tr(),
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter a valid Password';
+                return 'Please enter a valid Password'.tr();
               } else if (!AppRegex.hasMinLength(value)) {
-                return 'Password must be at least 8 characters';
+                return 'Password must be at least 8 characters'.tr();
               }
             },
             // controller: context.read<AuthCubit>().passwordController,

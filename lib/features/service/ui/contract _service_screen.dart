@@ -21,9 +21,9 @@ import 'package:home_ease/core/widgets/show_progress_indicator.dart';
 import 'package:home_ease/features/categorie/data/models/category_model.dart';
 import 'package:home_ease/features/service/logic/company_cubit.dart';
 import 'package:home_ease/features/service/logic/company_state.dart';
-import 'package:home_ease/features/service/ui/widget/contract%20_service/container_step.3.dart';
-import 'package:home_ease/features/service/ui/widget/contract%20_service/container_step_2.dart';
-import 'package:home_ease/features/service/ui/widget/contract%20_service/containet_step_1.dart';
+import 'package:home_ease/features/service/ui/widget/contract _service/container_step.3.dart';
+import 'package:home_ease/features/service/ui/widget/contract _service/container_step_2.dart';
+import 'package:home_ease/features/service/ui/widget/contract _service/containet_step_1.dart';
 
 class ContractServiceScreen extends StatefulWidget {
   final Categories? category;

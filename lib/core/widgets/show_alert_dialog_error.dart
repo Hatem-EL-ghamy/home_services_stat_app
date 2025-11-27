@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:home_ease/core/helpers/navigation_extensions.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
@@ -24,7 +25,7 @@ class ShowAlertDialogError extends StatelessWidget {
             context.pop();
           },
           child: Text(
-            'Got it',
+            'Got it'.tr(),
             style: TextStyles.font12mainGreen700,
           ),
         ),

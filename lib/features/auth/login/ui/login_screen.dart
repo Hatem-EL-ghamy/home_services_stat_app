@@ -1,18 +1,17 @@
-// ignore_for_file: unnecessary_import, depend_on_referenced_packages
-
-import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:home_ease/core/helpers/navigation_extensions.dart';
+import 'package:flutter/material.dart';
 import 'package:home_ease/core/routing/routes.dart';
-import 'package:home_ease/core/theming/text_styles%20.dart';
-import 'package:home_ease/core/widgets/custom_button.dart';
-import 'package:home_ease/features/auth/login/logic/login_cubit.dart';
-import 'package:home_ease/features/auth/login/ui/widgets/login_bloc_listener.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_ease/features/auth/login/ui/widgets/dont_have_account_text.dart';
-import 'package:home_ease/features/auth/login/ui/widgets/login_form.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:home_ease/translations/locale_keys.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:home_ease/core/widgets/custom_button.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_ease/core/theming/text_styles%20.dart';
+import 'package:home_ease/core/helpers/navigation_extensions.dart';
+import 'package:home_ease/features/auth/login/ui/widgets/login_form.dart';
+import 'package:home_ease/features/auth/login/ui/widgets/login_card_social.dart';
+import 'package:home_ease/features/auth/login/ui/widgets/dont_have_account_text.dart';
+import 'package:home_ease/features/auth/forgetpassword/ui/forget_password_screen.dart';
+// ignore_for_file: unnecessary_import, depend_on_referenced_packages
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -25,11 +24,11 @@ class LoginScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: 100.h,
+              const SizedBox(
+                height: 80,
               ),
               Text(
-                'Login'.tr(),
+                "Login".tr(),
                 style: TextStyles.font28Black700,
               ),
               Padding(
@@ -38,8 +37,7 @@ class LoginScreen extends StatelessWidget {
                   width: 340.w,
                   child: Text(
                     textAlign: TextAlign.center,
-                    'We\'re excited to have you back, can\'t wait to see what you\'ve been up to since you last logged in.'
-                        .tr(),
+                    "Welcome back! Please enter your details.".tr(),
                     style: TextStyles.font14Black500,
                   ),
                 ),
@@ -49,10 +47,15 @@ class LoginScreen extends StatelessWidget {
                 alignment: AlignmentDirectional.centerEnd,
                 child: TextButton(
                   onPressed: () {
-                    context.pushNamed(Routes.forgetPasswordScreen);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ForgetPasswordScreen(),
+                      ),
+                    );
                   },
                   child: Text(
-                    'Forget Password ?'.tr(),
+                    "Forget Password".tr(),
                     style: TextStyles.font16Black600,
                   ),
                 ),
@@ -61,27 +64,22 @@ class LoginScreen extends StatelessWidget {
                 height: 24.h,
               ),
               CustomButton(
-                text: 'Login'.tr(),
+                text: "Login".tr(),
                 onPressed: () {
-                  validateThenDoLogin(context);
+                  context.pushNamed(
+                    Routes.homeLayout,
+                  );
                 },
               ),
               SizedBox(
                 height: 16.h,
               ),
-              // const LogicCardSocial(),
+              const LogicCardSocial(),
               const DontHaveAccountText(),
-              const LoginBlocListener(),
             ],
           ),
         ),
       ),
     );
-  }
-
-  void validateThenDoLogin(BuildContext context) {
-    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      context.read<LoginCubit>().emitLoginAuthStates();
-    }
   }
 }

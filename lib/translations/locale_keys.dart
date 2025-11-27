@@ -39,4 +39,6 @@ abstract class LocaleKeys {
 
 
    static const termsAndConditions = 'Terms and Conditions';
+
+  static var forgetPasswordTitle;
 }

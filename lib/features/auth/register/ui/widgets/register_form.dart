@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:home_ease/core/helpers/app_regex.dart';
 import 'package:home_ease/core/theming/colors.dart';
-import 'package:home_ease/core/theming/text_styles%20.dart';
-import 'package:home_ease/core/widgets/app_text_form_field.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:home_ease/core/widgets/phone_text_form_field.dart';
-import 'package:home_ease/features/auth/register/logic/register_cubit.dart';
+import 'package:home_ease/core/helpers/app_regex.dart';
 import 'package:easy_localization/easy_localization.dart';
-
+import 'package:home_ease/core/theming/text_styles%20.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart'; 
+import 'package:home_ease/core/widgets/app_text_form_field.dart'; 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({super.key});
 
@@ -18,13 +14,10 @@ class RegisterForm extends StatefulWidget {
 
 class _RegisterFormState extends State<RegisterForm> {
   bool isPasswordObscureText = true;
-  bool isPasswordConfirmationObscureText = true;
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<RegisterCubit>();
     return Form(
-      key: cubit.formKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -45,7 +38,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 return 'fullName must be at least 4 characters'.tr();
               }
             },
-            controller: cubit.fullNameController,
+          
           ),
           SizedBox(
             height: 18.h,
@@ -54,18 +47,12 @@ class _RegisterFormState extends State<RegisterForm> {
             'Phone'.tr(),
             style: TextStyles.font16Black600,
           ),
-          PhoneTextFormField(
-            controller: cubit.phoneController,
-            onChanged: (phone) {
-              cubit.countryCode = phone.countryCode;
-            },
-          ),
+   
           Text(
             'Email'.tr(),
             style: TextStyles.font16Black600,
           ),
           AppTextFormField(
-            controller: cubit.emailController,
             keyboardType: TextInputType.emailAddress,
             suffixIcon: Icon(
               Icons.email_outlined,
@@ -109,37 +96,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 return 'Password must be at least 8 characters'.tr();
               }
             },
-            controller: cubit.passwordController,
-          ),
-          SizedBox(
-            height: 18.h,
-          ),
-          Text(
-            'Confirm Password'.tr(),
-          ),
-          AppTextFormField(
-            controller: cubit.confirmPasswordController,
-            hintText: 'Password Confirmation',
-            isObscureText: isPasswordConfirmationObscureText,
-            suffixIcon: GestureDetector(
-              onTap: () {
-                setState(() {
-                  isPasswordConfirmationObscureText =
-                      !isPasswordConfirmationObscureText;
-                });
-              },
-              child: Icon(
-                isPasswordConfirmationObscureText
-                    ? Icons.visibility_off
-                    : Icons.visibility,
-                color: ColorsApp.gray,
-              ),
-            ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please enter a valid PasswordConfirmation';
-              }
-            },
+  
           ),
           SizedBox(
             height: 48.h,

@@ -27,7 +27,7 @@ class HomeEase extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        onGenerateRoute: AppRouter().generateRoute,
+        onGenerateRoute: appRouter.generateRoute,
         theme: ThemeData(
           primaryColor: mainGreen,
           primarySwatch: mainGreen,

@@ -1,21 +1,21 @@
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter/material.dart';
-import 'package:home_ease/core/helpers/navigation_extensions.dart';
-import 'package:home_ease/core/networking/local/cache_helper.dart';
 import 'package:home_ease/core/routing/routes.dart';
 import 'package:home_ease/core/theming/colors.dart';
-import 'package:home_ease/core/theming/text_styles%20.dart';
-import 'package:home_ease/core/widgets/custom_Button.dart';
-
 import 'package:easy_localization/easy_localization.dart';
-
+import 'package:home_ease/translations/locale_keys.dart'; 
+import 'package:home_ease/core/widgets/custom_button.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_ease/core/theming/text_styles%20.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:home_ease/core/networking/local/cache_helper.dart';
+import 'package:home_ease/core/helpers/navigation_extensions.dart';
 import 'package:home_ease/features/on_boarding/data/models/on_boarding_model.dart';
 import 'package:home_ease/features/on_boarding/ui/widgets/build_on_boardingItem.dart';
 
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_ease/translations/locale_keys.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+
+
+
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -47,7 +47,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
               onPressed: () {
                 context.pushNamedAndRemoveUntil(
-                  Routes.loginScreen,
+                  Routes.authChoiceScreen,
                   predicate: (route) => false,
                 );
 
@@ -68,7 +68,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 if (index == boarding.length - 1) {
                   setState(() {
                     isLast = true;
-                    // CacheHelper.saveData(key: "onBoarding", value: isLast);
+                    CacheHelper.saveData(key: "onBoarding", value: isLast);
                   });
                 } else {
                   setState(() {
@@ -105,7 +105,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               onPressed: () {
                 if (isLast) {
                   context.pushNamedAndRemoveUntil(
-                    Routes.loginScreen,
+                    Routes.authChoiceScreen,
                     predicate: (route) => false,
                   );
                   CacheHelper.saveData(key: "onBoarding", value: true);

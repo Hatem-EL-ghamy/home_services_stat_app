@@ -1,230 +1,267 @@
-// import 'package:flutter/cupertino.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter/widgets.dart';
-// import 'package:home_ease/core/helpers/app_regex.dart';
-// import 'package:home_ease/core/theming/colors.dart';
-// import 'package:home_ease/core/theming/text_styles%20.dart';
-// import 'package:home_ease/core/widgets/app_text_form_field.dart';
-// import 'package:home_ease/core/widgets/custom_button.dart';
-// import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:easy_localization/easy_localization.dart';
-// import 'package:home_ease/features/profile/logic/profile_cubit.dart';
-// import 'package:home_ease/features/profile/logic/profile_state.dart';
-// import 'package:home_ease/features/profile/ui/widget/edit_image_and_cover_profile.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_ease/core/helpers/app_regex.dart';
+import 'package:home_ease/core/helpers/navigation_extensions.dart';
+import 'package:home_ease/core/networking/local/cache_helper.dart';
+import 'package:home_ease/core/theming/colors.dart';
+import 'package:home_ease/core/theming/text_styles%20.dart';
+import 'package:home_ease/core/widgets/app_text_form_field.dart';
+import 'package:home_ease/core/widgets/custom_button.dart';
 
-// class EditProfileScreen extends StatelessWidget {
-//   const EditProfileScreen({super.key});
+class EditProfileScreen extends StatefulWidget {
+  const EditProfileScreen({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         centerTitle: true,
-//         title: Text(
-//           'Edit Profile'.tr(),
-//           style: TextStyles.font18Black700,
-//         ),
-//       ),
-//       body: BlocConsumer<ProfileCubit, ProfileState>(
-//           listener: (context, state) {},
-//           builder: (context, state) {
-//             var userModel = BlocProvider.of<ProfileCubit>(context).userModel;
-    
-//             if (userModel == null) {
-//               return const Center(
-//                   child: CircularProgressIndicator(
-//                 color: ColorsApp.mainGreen,
-//               ));
-//             } else {
-//               var cubit = BlocProvider.of<ProfileCubit>(context);
-//               cubit.fullNameController.text = userModel.fullName;
-//               cubit.phoneController.text = userModel.phone;
-    
-//               return SingleChildScrollView(
-//                 child: Column(
-//                   crossAxisAlignment: CrossAxisAlignment.start,
-//                   children: [
-//                     if (state is ProfileUpdateLoadingState)
-//                       const LinearProgressIndicator(
-//                         color: ColorsApp.mainGreen,
-//                       ),
-//                     if (state is ProfileUpdateLoadingState)
-//                       const SizedBox(
-//                         height: 10.0,
-//                       ),
-//                     EditImageAndCoverProfile(userModel: userModel),
-//                     const SizedBox(
-//                       height: 20.0,
-//                     ),
-//                     if (cubit.profileImage != null ||
-//                         cubit.coverImage != null)
-//                       Padding(
-//                         padding: EdgeInsets.symmetric(horizontal: 20.w),
-//                         child: Row(
-//                           children: [
-//                             if (cubit.profileImage != null)
-//                               Expanded(
-//                                 child: Column(
-//                                   children: [
-//                                     CustomButton(
-//                                       height: 50,
-//                                       onPressed: () {
-//                                         cubit.uploadProfileImage(context);
-//                                       },
-//                                       text: 'upload profile',
-//                                     ),
-//                                     if (state is ProfileUpdateLoadingState)
-//                                       const SizedBox(
-//                                         height: 5.0,
-//                                       ),
-//                                     if (state is ProfileUpdateLoadingState)
-//                                       const LinearProgressIndicator(
-//                                         color: ColorsApp.mainGreen,
-//                                       ),
-//                                   ],
-//                                 ),
-//                               ),
-//                             const SizedBox(
-//                               width: 5.0,
-//                             ),
-//                             if (cubit.coverImage != null)
-//                               Expanded(
-//                                 child: Column(
-//                                   children: [
-//                                     CustomButton(
-//                                       height: 50,
-//                                       onPressed: () {
-//                                         cubit.uploadCoverImage();
-//                                       },
-//                                       text: 'upload cover',
-//                                     ),
-//                                     if (state is ProfileUpdateLoadingState)
-//                                       const SizedBox(
-//                                         height: 5.0,
-//                                       ),
-//                                     if (state is ProfileUpdateLoadingState)
-//                                       const LinearProgressIndicator(
-//                                         color: ColorsApp.mainGreen,
-//                                       ),
-//                                   ],
-//                                 ),
-//                               ),
-//                           ],
-//                         ),
-//                       ),
-//                     if (cubit.profileImage != null ||
-//                         cubit.coverImage != null)
-//                       SizedBox(
-//                         height: 32.h,
-//                       ),
-//                     Padding(
-//                       padding: EdgeInsets.symmetric(horizontal: 20.w),
-//                       child: Column(
-//                         crossAxisAlignment: CrossAxisAlignment.start,
-//                         children: [
-//                           Text(
-//                             'Full Name'.tr(),
-//                             style: TextStyles.font16Black600,
-//                           ),
-//                           SizedBox(
-//                             height: 8.h,
-//                           ),
-//                           AppTextFormField(
-//                             controller: context
-//                                 .read<ProfileCubit>()
-//                                 .fullNameController,
-//                             suffixIcon: const Icon(
-//                               Icons.person_2_outlined,
-//                               color: Color(0xffB5B5B5),
-//                             ),
-//                             hintText: 'Enter your Name'.tr(),
-//                             validator: (value) {
-//                               if (value == null || value.isEmpty) {
-//                                 return 'Please enter a valid Full Name'.tr();
-//                               } else if (value.length <= 3) {
-//                                 return 'fullName must be at least 4 characters'
-//                                     .tr();
-//                               }
-//                             },
-//                           ),
-//                           SizedBox(
-//                             height: 18.h,
-//                           ),
-//                           Text(
-//                             'Phone'.tr(),
-//                             style: TextStyles.font16Black600,
-//                           ),
-//                           SizedBox(
-//                             height: 8.h,
-//                           ),
-//                           AppTextFormField(
-//                             controller:
-//                                 context.read<ProfileCubit>().phoneController,
-//                             suffixIcon: const Icon(
-//                               Icons.phone_outlined,
-//                               color: Color(0xffB5B5B5),
-//                             ),
-//                             hintText: 'Enter your phone'.tr(),
-//                             validator: (value) {
-//                               if (value!.isEmpty) {
-//                                 return 'Please enter mobile number';
-//                               } else if (!AppRegex.isPhoneNumberValid(
-//                                   value)) {
-//                                 return 'Please enter valid mobile number';
-//                               }
-//                             },
-//                           ),
-//                           SizedBox(
-//                             height: 50.h,
-//                           ),
-//                           CustomButton(
-//                             text: 'Save Changes'.tr(),
-//                             style: TextStyles.font18Black700,
-//                             onPressed: () {
-//                               BlocProvider.of<ProfileCubit>(context)
-//                                   .updateUser();
-//                               // uploadProfileImage
-//                               //   context.pushNamed(Routes.);
-//                             },
-//                           ),
-//                           SizedBox(
-//                             height: 60.h,
-//                           ),
-//                           // Align(
-//                           //   alignment: Alignment.center,
-//                           //   child: ElevatedButton.icon(
-//                           //     style: ElevatedButton.styleFrom(
-//                           //       backgroundColor: Colors.red[100],
-//                           //       minimumSize: Size(220.w, 60.h),
-//                           //       shape: RoundedRectangleBorder(
-//                           //         borderRadius: BorderRadius.circular(16.r),
-//                           //       ),
-//                           //     ),
-//                           //     onPressed: () {},
-//                           //     icon: Icon(
-//                           //       Icons.delete_outlined,
-//                           //       color: ColorsApp.red,
-//                           //     ),
-//                           //     label: Text(
-//                           //       'Delete Account'.tr(),
-//                           //       style: TextStyles.font16Black700,
-//                           //     ),
-//                           //   ),
-//                           // ),
-//                           SizedBox(
-//                             height: 50.h,
-//                           ),
-//                         ],
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               );
-//             }
-    
-//             // var userModel = ProfileCubit.get(context).userModel
-//           }),
-//     );
-//   }
-// }
+  @override
+  State<EditProfileScreen> createState() => _EditProfileScreenState();
+}
+
+class _EditProfileScreenState extends State<EditProfileScreen> {
+  final _formKey = GlobalKey<FormState>();
+  late TextEditingController _fullNameController;
+  late TextEditingController _phoneController;
+  late TextEditingController _passwordController;
+  bool _isPasswordObscure = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _fullNameController = TextEditingController(
+      text: CacheHelper.getData(key: 'fullName') ?? 'Abdul Aziz Al-Qahtany',
+    );
+    _phoneController = TextEditingController(
+      text: CacheHelper.getData(key: 'phone') ?? '5621458751',
+    );
+    _passwordController = TextEditingController(text: '********');
+  }
+
+  @override
+  void dispose() {
+    _fullNameController.dispose();
+    _phoneController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  void _saveChanges() {
+    if (_formKey.currentState!.validate()) {
+      CacheHelper.saveData(key: 'fullName', value: _fullNameController.text);
+      CacheHelper.saveData(key: 'phone', value: _phoneController.text);
+      
+      Navigator.of(context).pop({
+        'name': _fullNameController.text,
+        'phone': _phoneController.text,
+      });
+      
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Profile updated successfully'.tr()),
+          backgroundColor: ColorsApp.mainGreen,
+        ),
+      );
+    }
+  }
+
+  void _deleteAccount() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Delete Account'.tr()),
+        content: Text('Are you sure you want to delete your account? This action cannot be undone.'.tr()),
+        actions: [
+          TextButton(
+            onPressed: () => context.pop(),
+            child: Text('Cancel'.tr()),
+          ),
+          TextButton(
+            onPressed: () {
+              // Handle account deletion
+              context.pop();
+              context.pop();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Account deleted successfully'.tr()),
+                  backgroundColor: Colors.red,
+                ),
+              );
+            },
+            child: Text(
+              'Delete'.tr(),
+              style: const TextStyle(color: Colors.red),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: ColorsApp.lightGreen,
+      appBar: AppBar(
+        elevation: 0,
+        centerTitle: true,
+        title: Text(
+          'Edit Profile'.tr(),
+          style: TextStyles.font18Black700,
+        ),
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              // Profile Picture with Camera Icon
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  CircleAvatar(
+                    radius: 50.r,
+                    backgroundColor: ColorsApp.lightGreen,
+                    backgroundImage: const AssetImage('assets/images/profile.png'),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Container(
+                      padding: EdgeInsets.all(8.w),
+                      decoration: BoxDecoration(
+                        color: ColorsApp.mainGreen,
+                        shape: BoxShape.circle,
+                        border: Border.all(color: ColorsApp.white, width: 2),
+                      ),
+                      child: Icon(
+                        Icons.camera_alt,
+                        color: ColorsApp.white,
+                        size: 20.sp,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 32.h),
+              
+              // Full Name Field
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(
+                  'Full Name'.tr(),
+                  style: TextStyles.font16Black600,
+                ),
+              ),
+              AppTextFormField(
+                controller: _fullNameController,
+                hintText: 'Enter your Full Name'.tr(),
+                keyboardType: TextInputType.name,
+                suffixIcon: const Icon(
+                  Icons.person_2_outlined,
+                  color: Color(0xffB5B5B5),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter a valid Full Name'.tr();
+                  } else if (value.length <= 3) {
+                    return 'fullName must be at least 4 characters'.tr();
+                  }
+                  return null;
+                },
+              ),
+              SizedBox(height: 18.h),
+              
+              // Phone Field
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(
+                  'Phone'.tr(),
+                  style: TextStyles.font16Black600,
+                ),
+              ),
+              AppTextFormField(
+                controller: _phoneController,
+                hintText: 'Enter your phone'.tr(),
+                keyboardType: TextInputType.phone,
+                suffixIcon: const Icon(
+                  Icons.phone_outlined,
+                  color: Color(0xffB5B5B5),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter mobile number'.tr();
+                  } else if (!AppRegex.isPhoneNumberValid(value)) {
+                    return 'Please enter valid mobile number'.tr();
+                  }
+                  return null;
+                },
+              ),
+              SizedBox(height: 18.h),
+              
+              // Password Field
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(
+                  'Password'.tr(),
+                  style: TextStyles.font16Black600,
+                ),
+              ),
+              AppTextFormField(
+                controller: _passwordController,
+                hintText: 'Enter Your Password'.tr(),
+                isObscureText: _isPasswordObscure,
+                keyboardType: TextInputType.visiblePassword,
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _isPasswordObscure = !_isPasswordObscure;
+                    });
+                  },
+                  child: Icon(
+                    _isPasswordObscure ? Icons.visibility_off : Icons.visibility,
+                    color: const Color(0xffB5B5B5),
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter a valid Password'.tr();
+                  } else if (!AppRegex.hasMinLength(value)) {
+                    return 'Password must be at least 8 characters'.tr();
+                  }
+                  return null;
+                },
+              ),
+              SizedBox(height: 40.h),
+              
+              // Save Changes Button
+              CustomButton(
+                text: 'Save Changes'.tr(),
+                onPressed: _saveChanges,
+              ),
+              SizedBox(height: 20.h),
+              
+              // Delete Account Button
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red[100],
+                  minimumSize: Size(double.infinity, 60.h),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.r),
+                  ),
+                ),
+                onPressed: _deleteAccount,
+                icon: const Icon(
+                  Icons.delete_outlined,
+                  color: Colors.red,
+                ),
+                label: Text(
+                  'Delete Account'.tr(),
+                  style: TextStyles.font16Black700.copyWith(color: Colors.red),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

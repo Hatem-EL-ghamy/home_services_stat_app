@@ -1,56 +1,99 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 import 'package:home_ease/core/networking/local/cache_helper.dart';
-import 'package:home_ease/features/service/data/models/contract_order_model.dart';
-import 'package:home_ease/features/service/data/models/hourly_order_model.dart';
-import 'package:home_ease/features/service/data/repo/company_repo.dart';
-
 import 'package:home_ease/features/service/logic/company_state.dart';
+import 'package:home_ease/features/service/data/models/product_company.dart';
+import 'package:home_ease/features/service/data/models/order_response.dart';
 
 class CompanyCubit extends Cubit<CompanyState> {
-  CompanyCubit(this._CompanyRepo) : super(const CompanyState.initial());
-
-  final CompanyRepo _CompanyRepo;
+  CompanyCubit() : super(const CompanyState.initial());
 
   int? companyId;
-
-
   int? companyIdHourly;
-  // int index=-1;
 
   List contractCompanies = [];
+  
+  // Static contract companies data
+  static final List<Companies> _staticContractCompanies = [
+    Companies(
+      id: '1',
+      name: 'Premium Cleaning Service',
+      image: 'assets/images/company1.png',
+      description: 'Professional cleaning service',
+      path: 'assets/images/company1.png',
+      price: '500',
+      nationality: 'Egyptian',
+      numbers: '10',
+    ),
+    Companies(
+      id: '2',
+      name: 'Expert Plumbing Co.',
+      image: 'assets/images/company2.png',
+      description: '24/7 plumbing services',
+      path: 'assets/images/company2.png',
+      price: '300',
+      nationality: 'Egyptian',
+      numbers: '8',
+    ),
+    Companies(
+      id: '3',
+      name: 'Electric Solutions',
+      image: 'assets/images/company3.png',
+      description: 'Certified electricians',
+      path: 'assets/images/company3.png',
+      price: '400',
+      nationality: 'Egyptian',
+      numbers: '12',
+    ),
+  ];
+  
   Future<void> emitGetContractAllCompaniesStates() async {
     emit(const CompanyState.getContractAllCompaniesLoading());
 
-    final response = await _CompanyRepo.getContractAllCompanies();
-    response.when(success: (response) {
-      // companyId = response.companies![index].id!;
-      log(response.toString());
-      contractCompanies = response.companies!;
-      emit(CompanyState.getContractAllCompaniesSuccess(response));
-    }, failure: (error) {
-      emit(CompanyState.getContractAllCompaniesError(
-          error: error.apiErrorModel.message ?? ''));
-    });
+    // Static data - simulate API call
+    await Future.delayed(const Duration(seconds: 1));
+    
+    contractCompanies = _staticContractCompanies;
+    final companyModel = ProductCompanyModel(companies: _staticContractCompanies);
+    emit(CompanyState.getContractAllCompaniesSuccess(companyModel));
   }
 
   List hourlyCompanies = [];
 
+  // Static hourly companies data
+  static final List<Companies> _staticHourlyCompanies = [
+    Companies(
+      id: '4',
+      name: 'Quick Clean',
+      image: 'assets/images/company4.png',
+      description: 'Hourly cleaning service',
+      path: 'assets/images/company4.png',
+      price: '50',
+      nationality: 'Egyptian',
+      numbers: '15',
+    ),
+    Companies(
+      id: '5',
+      name: 'Fast Plumbing',
+      image: 'assets/images/company5.png',
+      description: 'On-demand plumbing',
+      path: 'assets/images/company5.png',
+      price: '80',
+      nationality: 'Egyptian',
+      numbers: '6',
+    ),
+  ];
+
   Future<void> emitGetHourlyAllCompaniesStates() async {
     emit(const CompanyState.getHourlyAllCompaniesLoading());
 
-    final response = await _CompanyRepo.getHourlyAllCompanies();
-    response.when(success: (response) {
-      log(response.toString());
-      hourlyCompanies = response.companies!;
-      emit(CompanyState.getHourlyAllCompaniesSuccess(response));
-    }, failure: (error) {
-      emit(CompanyState.getHourlyAllCompaniesError(
-          error: error.apiErrorModel.message ?? ''));
-    });
+    // Static data - simulate API call
+    await Future.delayed(const Duration(seconds: 1));
+    
+    hourlyCompanies = _staticHourlyCompanies;
+    final companyModel = ProductCompanyModel(companies: _staticHourlyCompanies);
+    emit(CompanyState.getHourlyAllCompaniesSuccess(companyModel));
   }
 
   var token = CacheHelper.getData(key: 'token');
@@ -66,26 +109,23 @@ class CompanyCubit extends Cubit<CompanyState> {
   }) async {
     emit(const CompanyState.orderContractAllCompaniesLoading());
 
-    final response = await _CompanyRepo.contractOrderAllCompanies(
-      token: "Bearer $token",
-      contractOrder: ContractOrder(
-        address: address,
-        companyId: companyId,
-        date: date,
-        nationality: nationality,
-        numberOfMonths: numberOfMonths,
-        city: city,
-        categorieId: categorieId,
-      ),
+    // Static data - simulate API call
+    await Future.delayed(const Duration(seconds: 1));
+    
+    // Mock static response
+    final mockResponse = OrderResponse(
+      message: 'Contract order placed successfully',
+      status: 200,
+      orderData: {
+        'orderId': 'ORD_${DateTime.now().millisecondsSinceEpoch}',
+        'companyId': companyId,
+        'numberOfMonths': numberOfMonths,
+        'city': city,
+        'address': address,
+      },
     );
-    response.when(success: (response) {
-      log(response.toString());
-
-      emit(CompanyState.orderContractAllCompaniesSuccess(response));
-    }, failure: (error) {
-      emit(CompanyState.orderContractAllCompaniesError(
-          error: error.apiErrorModel.message ?? ''));
-    });
+    
+    emit(CompanyState.orderContractAllCompaniesSuccess(mockResponse));
   }
 
   Future<void> orderHourlyAllCompanies({
@@ -101,27 +141,25 @@ class CompanyCubit extends Cubit<CompanyState> {
   }) async {
     emit(const CompanyState.orderHourlyAllCompaniesLoading());
 
-    final response = await _CompanyRepo.hourlyOrderAllCompanies(
-      token: "Bearer $token",
-      hourlyOrder: HourlyOrder(
-        address: address,
-        companyId: companyId,
-        date: date,
-        nationality: nationality,
-        city: city,
-        categorieId: categorieId,
-        numberOfHours: numberOfHours,
-        period: period,
-        time: time,
-      ),
+    // Static data - simulate API call
+    await Future.delayed(const Duration(seconds: 1));
+    
+    // Mock static response
+    final mockResponse = OrderResponse(
+      message: 'Hourly order placed successfully',
+      status: 200,
+      orderData: {
+        'orderId': 'ORD_${DateTime.now().millisecondsSinceEpoch}',
+        'companyId': companyId,
+        'numberOfHours': numberOfHours,
+        'city': city,
+        'address': address,
+        'date': date?.toString(),
+        'period': period,
+        'time': time,
+      },
     );
-    response.when(success: (response) {
-      log(response.toString());
-
-      emit(CompanyState.orderHourlyAllCompaniesSuccess(response));
-    }, failure: (error) {
-      emit(CompanyState.orderHourlyAllCompaniesError(
-          error: error.apiErrorModel.message ?? ''));
-    });
+    
+    emit(CompanyState.orderHourlyAllCompaniesSuccess(mockResponse));
   }
 }

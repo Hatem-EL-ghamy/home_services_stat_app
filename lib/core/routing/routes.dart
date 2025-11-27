@@ -1,4 +1,5 @@
 class Routes {
+  static const String splashScreen = "/splashScreen";
   static const String onBoardingScreen = "/onBoardingScreen";
 
   static const String loginScreen = "/loginScreen";
@@ -16,7 +17,6 @@ class Routes {
   static const String hourlyServiceScreen = "/hourlyServiceScreen";
   static const String contractServiceScreen = "/contractServiceScreen";
 
-  
   static const String companyscreen = "/companyscreen";
   static const String mywalletscreen = "/myWalletScreen";
   static const String dashbordscreen = "/dashbordscreen";
@@ -32,25 +32,22 @@ class Routes {
 
   static const String forgetPasswordScreen = "/forgetPasswordScreen";
 
-
   static const String historyScreen = "/historyScreen";
   static const String orderDetalisScreen = "/orderDetalisScreen";
 
-  
-
   static const String contactUsScreen = "/contactUsScreen";
-
 
   static const String testScreen = "/testScreen";
 
   static const String termsAndConditions = "/termsAndConditions";
 
+  static const String serviceType = "/serviceType";
 
-    static const String serviceType = "/serviceType";
+  static String SplashScreen = "/SplashScreen";
 
-
-
-  
- 
-  
+  static const String serviceProviderRegisterScreen =
+      "/serviceProviderRegisterScreen";
+  static const String userTypeSelectionScreen = "/userTypeSelectionScreen";
+   static const String freeProfileScreen = "/freeProfileScreen";
+   static const String authChoiceScreen = "/authChoiceScreen";
 }

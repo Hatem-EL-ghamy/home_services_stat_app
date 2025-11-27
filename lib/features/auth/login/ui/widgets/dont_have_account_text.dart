@@ -1,11 +1,10 @@
-// ignore_for_file: depend_on_referenced_packages
-
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:home_ease/core/helpers/navigation_extensions.dart';
 import 'package:home_ease/core/routing/routes.dart';
-import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_ease/core/theming/text_styles%20.dart';
+import 'package:home_ease/core/helpers/navigation_extensions.dart';
 
 class DontHaveAccountText extends StatelessWidget {
   const DontHaveAccountText({super.key});
@@ -19,15 +18,15 @@ class DontHaveAccountText extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: 'Don\'t have an account ? ',
+              text: '${"Don't have an account?".tr()} ',
               style: TextStyles.font16Black400,
             ),
             TextSpan(
-              text: ' Register',
+              text: 'Register'.tr(),
               style: TextStyles.font16Black700,
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  context.pushReplacementNamed(Routes.registerScreen);
+                  context.pushReplacementNamed(Routes.userTypeSelectionScreen);
                 },
             ),
           ],

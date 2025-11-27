@@ -18,7 +18,7 @@ class ContactUS extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          ' Contact Us'.tr(),
+          'Contact Us'.tr(),
           style: TextStyles.font18Black700,
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:home_ease/core/theming/colors.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
@@ -19,7 +20,7 @@ class PhoneTextFormField extends StatelessWidget {
     return IntlPhoneField(
       validator: (value) {
         if (value == null || value.completeNumber.isEmpty|| value.number.isEmpty) {
-          return 'Please enter a valid phone number';
+          return 'Please enter a valid phone number'.tr();
         }
         return null;
       },
@@ -56,7 +57,7 @@ class PhoneTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.circular(16.0),
         ),
         hintStyle: TextStyles.font16Gray500,
-        hintText: "Enter your phone",
+        hintText: "Enter your phone".tr(),
         suffixIcon: Icon(
           Icons.phone_outlined,
           color: ColorsApp.gray,

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:home_ease/core/helpers/navigation_extensions.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_ease/core/routing/routes.dart';
 import 'package:home_ease/core/theming/colors.dart';
-import 'package:home_ease/core/theming/text_styles%20.dart';
-import 'package:home_ease/core/widgets/custom_button.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
-
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:home_ease/core/widgets/custom_button.dart';
+import 'package:home_ease/core/theming/text_styles%20.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_ease/core/helpers/navigation_extensions.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});
@@ -28,7 +27,7 @@ class ResetPasswordScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.h),
               child: Text(
-                'abod@gmail.cpm',
+                'hatemn480@gmail.cpm',
                 style: TextStyles.font16Black600,
               ),
             ),
@@ -49,7 +48,8 @@ class ResetPasswordScreen extends StatelessWidget {
               child: CustomButton(
                 radius: 12.r,
                 onPressed: () {
-                  context.pushNamedAndRemoveUntil(Routes.loginScreen, predicate: (route) => false);
+                  context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                      predicate: (route) => false);
                 },
                 text: "Done",
               ),
